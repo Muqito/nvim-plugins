@@ -3,4 +3,8 @@ return {
   opts = {},
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function ()
+    require("oil").setup()
+    vim.keymap.set("n", "<leader>fo", "<CMD>Oil<CR>", { desc = "Oil" }) 
+  end
 }
